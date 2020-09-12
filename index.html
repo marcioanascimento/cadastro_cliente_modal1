@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios JavaScript</title>
+    <!--========= Bootstrap CSS =========-->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <!--========= Favicon =========-->
+    <link rel="shortcut icon" href="/src/img/favico-js.svg" type="image/x-icon">
+    <!--========= Estilo CSS =========-->
+    <link rel="stylesheet" href="/src/css/style.css">
+    <!--========= Font Awesome =========-->
+    <script src="https://kit.fontawesome.com/a04a71a8a5.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div>
+        <h2 class="mt-5 text-white text-center bg-primary pb-2">Cadastro de Cliente</h2>
+    </div>
+
+    <section>
+        <div class="container mt-5">    
+            <form id="formApp" autocomplete="off">
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <label for="nome">Nome</label>
+                        <input name="nome" type="text" class="form-control" id="nome" autocomplete="off" placeholder="Digite seu nome">
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="sobrenome">Sobrenome</label>
+                        <input name="sobrenome" type="text" class="form-control" id="sobrenome" autocomplete="none" placeholder="Digite seu sobrenome">
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="telefone">Telefone</label>
+                        <input name="telefone" type="phone" class="form-control" id="telefone" autocomplete="none" placeholder="Digite seu telefone">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-2">
+                        <label for="cep">CEP</label>
+                        <input name="cep" type="text" class="form-control" maxlength="9" id="cep" autocomplete="none" placeholder="Digite seu CEP">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="logradouro">Endereço</label>
+                        <input name="logradouro" type="text" class="form-control" id="logradouro" autocomplete="none" placeholder="Rua, Avenida, Travessa...">
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="bairro">Bairro</label>
+                        <input name="bairro" type="text" class="form-control" id="bairro" autocomplete="none" placeholder="Seu Bairro">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-5">
+                        <label for="complemento">Complemento</label>
+                        <input name="complemento" type="text" class="form-control" id="complemento" autocomplete="none" placeholder="Apartamenot, lote, vila...">
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="localidade">Cidade</label>
+                        <input name="localidade" type="text" class="form-control" id="localidade" autocomplete="none" placeholder="Digite sua Cidade">
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="uf">Estado</label>
+                        <input name="uf" type="text" class="form-control" id="uf" autocomplete="none" placeholder="Digite a uf">
+                    </div>
+                </div>
+            </form>
+            <!-- Button modal -->
+            <button type="button" value="Salvar" onclick="adicionar()" class="btn btn-success mt-3" data-toggle="modal" data-target="#exampleModal">
+                Adicionar
+            </button>
+            <button type="submit" value="Limpa" onclick="limparCampos()" class="btn btn-info mt-3 pl-4 pr-4">Limpar</button>
+        </div>
+    </section>                  
+    </div>
+
+    <footer class="font-small bg-dark mt-3 fixed-bottom">
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3 text-white">© 2020 Copyright:
+          <a href="https://mdbootstrap.com/"> Marcio A. Nascimento</a>
+        </div>
+        <!-- Copyright -->
+      
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Dados adicionados</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <h4 class="text-primary" id="valorNome"></h4>
+                    <h4 class="mt-3" id="valorSobrenome"></h4>
+                    <p id="valorTelefone"></p>
+                    <p id="valorCep"></p>
+                    <p id="valorLogradouro"></p>
+                    <p id="valorBairro"></p>
+                    <p id="valorComplemento"></p>
+                    <p id="valorLocalidade"></p>
+                    <p id="valorUf"></p>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="/node_modules/jquery/dist/jquery.js"></script>
+    <script src="/node_modules/@popperjs/core/dist/umd/popper.js"></script>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="/scripts/main.js"></script>
+</body>
+</html>
