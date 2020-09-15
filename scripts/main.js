@@ -12,25 +12,25 @@ var capturandoUf = "";
 
 function adicionar() { //a variável criada é colocada junto ao id que será capturado com o valor
 
-    capturandoNome = document.getElementById("nome").value;
-    capturandoSobrenome = document.getElementById("sobrenome").value;
-    capturandoTelefone = document.getElementById("telefone").value;
-    capturandoCep = document.getElementById("cep").value;
-    capturandoLogradouro = document.getElementById("logradouro").value;
-    capturandoBairro = document.getElementById("bairro").value;
-    capturandoComplemento = document.getElementById("complemento").value;
-    capturandoLocalidade = document.getElementById("localidade").value;
-    capturandoUf = document.getElementById("uf").value;
+    capturandoNome = document.querySelector("#nome").value;
+    capturandoSobrenome = document.querySelector("#sobrenome").value;
+    capturandoTelefone = document.querySelector("#telefone").value;
+    capturandoCep = document.querySelector("#cep").value;
+    capturandoLogradouro = document.querySelector("#logradouro").value;
+    capturandoBairro = document.querySelector("#bairro").value;
+    capturandoComplemento = document.querySelector("#complemento").value;
+    capturandoLocalidade = document.querySelector("#localidade").value;
+    capturandoUf = document.querySelector("#uf").value;
 
-    //aqui o valo... é o id do campo que receberá (innerHTML) o input da function adicionar
-    document.getElementById( 'valorNome',' valorSobrenome' ).innerHTML = capturandoNome+' '+capturandoSobrenome;
-    document.getElementById( 'valorTelefone' ).innerHTML = 'Telefone: ' + ' ' + capturandoTelefone; 
-    document.getElementById( 'valorCep' ).innerHTML = 'CEP: ' + ' ' + capturandoCep; 
-    document.getElementById( 'valorLogradouro' ).innerHTML = 'Endereço: ' + ' ' + capturandoLogradouro; 
-    document.getElementById( 'valorBairro' ).innerHTML = 'Bairro: ' + ' ' + capturandoBairro; 
-    document.getElementById( 'valorComplemento' ).innerHTML = 'Complemento: ' + ' ' + capturandoComplemento;
-    document.getElementById( 'valorLocalidade' ).innerHTML = 'Cidade: ' + ' ' + capturandoLocalidade;
-    document.getElementById( 'valorUf' ).innerHTML = 'UF: ' + ' ' + capturandoUf;
+    //aqui o valor... é o id do campo que receberá (innerHTML) o input da function adicionar
+    document.querySelector( '#valorNome',' #valorSobrenome' ).innerHTML = capturandoNome+' '+capturandoSobrenome;
+    document.querySelector( '#valorTelefone' ).innerHTML = 'Telefone: ' + ' ' + capturandoTelefone; 
+    document.querySelector( '#valorCep' ).innerHTML = 'CEP: ' + ' ' + capturandoCep; 
+    document.querySelector( '#valorLogradouro' ).innerHTML = 'Endereço: ' + ' ' + capturandoLogradouro; 
+    document.querySelector( '#valorBairro' ).innerHTML = 'Bairro: ' + ' ' + capturandoBairro; 
+    document.querySelector( '#valorComplemento' ).innerHTML = 'Complemento: ' + ' ' + capturandoComplemento;
+    document.querySelector( '#valorLocalidade' ).innerHTML = 'Cidade: ' + ' ' + capturandoLocalidade;
+    document.querySelector( '#valorUf' ).innerHTML = 'UF: ' + ' ' + capturandoUf;
    
 }
 
